@@ -1,1 +1,1 @@
-# English 
+# English - <img src="utils/eua.png" />
