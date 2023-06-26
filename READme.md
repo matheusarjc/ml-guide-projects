@@ -1,1 +1,1 @@
-# English - <img src="utils/eua.png" alt="USA Flag" width="120" height="120">
+# English - <img src="utils/eua.png" alt="USA Flag" width="250" height="120">
