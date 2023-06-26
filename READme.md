@@ -1,1 +1,1 @@
-# English - <img src="utils/eua.png" />
+# English - ![USA Flag](utils/eua.png)
