@@ -1,0 +1,36 @@
+body {
+  font-family: "Poppins", sans-serif;
+}
+
+.page-width {
+  padding: 0 3.25rem;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.container-title {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.title {
+  font-size: 4rem;
+  font-weight: 700;
+  display: flex;
+}
+
+.container-list {
+  display: flex;
+  flex-direction: column;
+  /*   align-items: center; */
+  justify-content: center;
+}
+
+.container-list li {
+  font-size: 0.95rem;
+}
