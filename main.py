@@ -21,7 +21,6 @@ def adicionar_projeto():
     conn.commit()
     print("Projeto adicionado com sucesso!")
 
-
 def atualizar_status_projeto():
     nome_projeto = input("Digite o nome do projeto: ")
     novo_status = input("Digite o novo status do projeto (Em andamento/Pausado/Concluído): ")

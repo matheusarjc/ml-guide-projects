@@ -13,7 +13,7 @@ def listar_projetos():
     conn = sqlite3.connect('projetos.db')
     cursor = conn.cursor()
 
-    cursor.execute("SELECT id, nome_do_projeto, status FROM projetos")
+    cursor.execute("SELECT id, nome_do_projeto, status, link_repositorio FROM projetos")
     projetos = cursor.fetchall()
 
     conn.close()

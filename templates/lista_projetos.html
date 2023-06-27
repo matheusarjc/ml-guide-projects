@@ -6,7 +6,6 @@
       rel="stylesheet"
       href="{{ url_for('serve_css', filename='style.css') }}"
     />
-
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -14,19 +13,47 @@
       rel="stylesheet"
     />
   </head>
-  <body class="page-width">
-    <div class="container">
-      <div class="container-title">
+  <body>
+    <div class="page-width">
+      <header class="container-title">
         <span class="title">Lista de Projetos</span>
-      </div>
-
-      <div class="container-list">
-        <ul>
-          {% for projeto in projetos %}
-          <li>{{ projeto[1] }}</li>
-          {% endfor %}
-        </ul>
+      </header>
+      <div class="container">
+        <div class="container-list">
+          <ul>
+            {% for projeto in projetos %}
+            <a class="project-name" href="{{ projeto[3] }}" target="_blank">
+              <li>{{ projeto[1] }}</li>
+            </a>
+            {% endfor %}
+          </ul>
+        </div>
       </div>
     </div>
+    <footer>
+      <div class="container-footer">
+        <div class="socials">
+          <a class="links" href="https://www.linkedin.com/in/matheusarjc/">
+            <img
+              id="icon"
+              src="..\static\images\linkedin-logo-fill.svg"
+              alt=""
+              srcset=""
+            />
+            <span class="tooltiptext">LinkedIn</span>
+          </a>
+          <a class="links" href="https://github.com/matheusarjc">
+            <img
+              id="icon"
+              src="..\static\images\github-logo-fill.svg"
+              alt=""
+              srcset=""
+            />
+            <span class="tooltiptext">GitHub</span>
+          </a>
+        </div>
+        <div class="copyright"><span>Made by Matheusarjc ©2023</span></div>
+      </div>
+    </footer>
   </body>
 </html>

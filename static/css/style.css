@@ -1,5 +1,7 @@
 body {
   font-family: "Poppins", sans-serif;
+  margin: 0;
+  background-color: #ecf39e;
 }
 
 .page-width {
@@ -26,11 +28,100 @@ body {
 
 .container-list {
   display: flex;
-  flex-direction: column;
   /*   align-items: center; */
   justify-content: center;
 }
 
-.container-list li {
-  font-size: 0.95rem;
+.container-list ul {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 1rem;
+  padding-left: 0;
+}
+
+.project-name {
+  text-decoration: none;
+  color: #000b00;
+
+  padding: 1rem;
+  border-radius: 0.3rem;
+  border: 2px solid #90a955;
+}
+
+.project-name:hover {
+  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.5);
+  color: #fff;
+  transition: 0.3s linear;
+  background-color: #90a955;
+}
+
+li {
+  font-size: 2rem;
+  list-style: none;
+  text-align: center;
+}
+
+@media screen and (min-width: 768px) {
+  li {
+    font-size: 1.5rem;
+  }
+}
+
+.links {
+  text-decoration: none;
+  color: #000b00;
+}
+
+.container-footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.socials {
+  display: flex;
+  gap: 2rem;
+}
+
+.links {
+  position: relative;
+  display: inline-block;
+}
+
+.links .tooltiptext {
+  opacity: 0;
+  width: 120px;
+  background-color: black;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px 0;
+
+  /* Position the tooltip */
+  position: absolute;
+  z-index: 1;
+  bottom: 100%;
+  left: 50%;
+  margin-left: -60px;
+}
+
+.links:hover .tooltiptext {
+  opacity: 1;
+  transition: 1s ease;
+}
+
+#icon {
+  width: 3rem;
+  height: 3rem;
+}
+
+footer {
+  padding: 4rem 0;
+  background-color: #31572c;
+}
+
+.copyright > span {
+  color: #fff;
 }
