@@ -2,58 +2,119 @@
 <html>
   <head>
     <title>Lista de Projetos</title>
-    <link
+    <!--  <link
       rel="stylesheet"
       href="{{ url_for('serve_css', filename='style.css') }}"
-    />
+    /> -->
+    <link rel="stylesheet" href="../static/css/style.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;400;700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;400;700;800&display=swap"
       rel="stylesheet"
     />
   </head>
   <body>
-    <div class="page-width">
-      <header class="container-title">
-        <span class="title">Lista de Projetos</span>
-      </header>
-      <div class="container">
-        <div class="container-list">
-          <ul>
-            {% for projeto in projetos %}
-            <a class="project-name" href="{{ projeto[3] }}" target="_blank">
-              <li>{{ projeto[1] }}</li>
+    <!-- First Background -->
+    <div class="content-bg">
+      <!-- Content Body -->
+      <div class="container page-width">
+        <header class="header-container">
+          <nav>
+            <ul class="menu">
+              <li><a href="#">Repository</a></li>
+              <li><a href="#">Who am I?</a></li>
+              <li>
+                <details>
+                  <summary>
+                    Socials
+                    <img
+                      id="caret"
+                      class="caret"
+                      src="../static/images/CaretDown.svg"
+                      alt=""
+                    />
+                  </summary>
+                  <div>
+                    <a href="">Github</a>
+                    <a href="">LinkedIn</a>
+                  </div>
+                </details>
+              </li>
+              <a class="ctt-button" href="">Talk to me!</a>
+            </ul>
+            <div class="menu-toggle">
+              <img
+                class="points-menu"
+                src="../static/images/DotsThreeVertical.svg"
+                alt=""
+              />
+            </div>
+          </nav>
+        </header>
+        <!-- <div class="container">
+          <div class="container-list">
+            <ul>
+              <a class="project-name" href="http://">
+                <li>Nome do projeto</li>
+              </a>
+              {% for projeto in projetos %}
+              <a class="project-name" href="{{ projeto[3] }}" target="_blank">
+                <li>{{ projeto[1] }}</li>
+              </a>
+              {% endfor %}
+            </ul>
+          </div>
+        </div> -->
+      </div>
+      <!-- FOOTER -->
+      <!-- <footer>
+        <div class="container-footer">
+          <div class="socials">
+            <a class="links" href="https://www.linkedin.com/in/matheusarjc/">
+              <img
+                id="icon"
+                src="..\static\images\linkedin-logo-fill.svg"
+                alt=""
+                srcset=""
+              />
+              <span class="tooltiptext">LinkedIn</span>
             </a>
-            {% endfor %}
-          </ul>
+            <a class="links" href="https://github.com/matheusarjc">
+              <img
+                id="icon"
+                src="..\static\images\github-logo-fill.svg"
+                alt=""
+                srcset=""
+              />
+              <span class="tooltiptext">GitHub</span>
+            </a>
+          </div>
+          <div class="copyright"><span>Made by Matheusarjc ©2023</span></div>
         </div>
-      </div>
+      </footer> -->
     </div>
-    <footer>
-      <div class="container-footer">
-        <div class="socials">
-          <a class="links" href="https://www.linkedin.com/in/matheusarjc/">
-            <img
-              id="icon"
-              src="..\static\images\linkedin-logo-fill.svg"
-              alt=""
-              srcset=""
-            />
-            <span class="tooltiptext">LinkedIn</span>
-          </a>
-          <a class="links" href="https://github.com/matheusarjc">
-            <img
-              id="icon"
-              src="..\static\images\github-logo-fill.svg"
-              alt=""
-              srcset=""
-            />
-            <span class="tooltiptext">GitHub</span>
-          </a>
-        </div>
-        <div class="copyright"><span>Made by Matheusarjc ©2023</span></div>
-      </div>
-    </footer>
+    <img class="blurbg" src="../static/images/Blur-BG.svg" alt="" />
   </body>
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      var menuToggle = document.querySelector(".menu-toggle");
+      var mobileMenu = document.querySelector(".menu");
+
+      menuToggle.addEventListener("click", function () {
+        this.classList.toggle("active");
+        if (mobileMenu.style.display === "flex") {
+          mobileMenu.style.display = "none";
+        } else {
+          mobileMenu.style.display = "flex";
+        }
+      });
+    });
+
+    const caret = document.getElementById("caret");
+
+    caret.addEventListener("click", () => {
+      caret.classList.toggle("rotated");
+    });
+  </script>
 </html>
