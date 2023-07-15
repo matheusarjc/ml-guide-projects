@@ -13,11 +13,13 @@ li {
   width: 100%;
   position: absolute;
   bottom: 0;
+  left: 0;
   z-index: -1;
 }
 
 .content-bg {
   padding: 2.5rem 3rem 0;
+  position: relative;
 }
 
 .container {
@@ -219,7 +221,7 @@ nav {
   line-height: 110%;
   text-align: center;
 
-  margin-top: 6.25rem;
+  margin-top: 3rem;
   position: relative;
 }
 
@@ -241,6 +243,93 @@ nav {
   filter: blur(70px);
 
   position: absolute;
+}
+
+.second-section {
+  margin-top: 3.75rem;
+}
+
+.title-ss {
+  font-size: 2.5rem;
+  font-weight: 700;
+  line-height: 102%; /* 71.4px */
+  letter-spacing: -1.05px;
+}
+
+.kind-of-project {
+  display: grid;
+  grid-template-columns: 50% 50%;
+  margin-top: 1rem;
+  gap: 0.7rem;
+}
+
+.styles-projects {
+  display: flex;
+  align-items: center;
+  font-size: 0.75rem;
+  gap: 0.3rem;
+  line-height: 102%; /* 24.48px */
+  letter-spacing: -0.36px;
+}
+.check-icon {
+  height: 1.2rem;
+}
+
+.ss-whoami {
+  margin-top: 2rem;
+}
+
+.card-whoami {
+  width: 100%;
+  height: auto;
+  padding: 1.4rem 0;
+  flex-shrink: 0;
+
+  display: flex;
+  flex-direction: column;
+
+  border-radius: 30px;
+  background: linear-gradient(137deg, #fff 0%, rgba(255, 255, 255, 0.4) 71.4%);
+  box-shadow: 0px 4px 40px 0px rgba(0, 0, 0, 0.25);
+  backdrop-filter: blur(20px);
+}
+
+.card-whoami .title {
+  text-align: center;
+  font-size: 1.7rem;
+  font-weight: 700;
+
+  background: linear-gradient(149deg, #0a0b0a 0%, #31572c 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.card-whoami .subtitle {
+  color: #969292;
+  text-align: center;
+  letter-spacing: -0.008px;
+  padding: 0 1rem;
+}
+
+.whoami-description {
+  margin-top: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.data-whoami {
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+  padding-left: 1rem;
+
+  font-size: 0.875rem;
+}
+
+.data-whoami > img {
+  height: 1.4rem;
 }
 
 @media screen and (min-width: 768px) {
