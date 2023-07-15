@@ -22,8 +22,8 @@
         <header class="header-container">
           <nav>
             <ul class="menu">
-              <li><a href="#">Repository</a></li>
-              <li><a href="#">Who am I?</a></li>
+              <li><a class="navlink" href="#">Repository</a></li>
+              <li><a class="navlink" href="#">Who am I?</a></li>
               <li>
                 <details>
                   <summary>
@@ -35,9 +35,9 @@
                       alt=""
                     />
                   </summary>
-                  <div>
-                    <a href="">Github</a>
-                    <a href="">LinkedIn</a>
+                  <div class="container-links">
+                    <a class="social-link" href="">Github</a>
+                    <a class="social-link" href="">LinkedIn</a>
                   </div>
                 </details>
               </li>
@@ -52,6 +52,24 @@
             </div>
           </nav>
         </header>
+        <!-- First Section -->
+        <div>
+          <div class="attetion-content">
+            <span class="a-title">Hey!</span>
+            <span class="a-subtitle"
+              >Welcome to my Machine Learning and Data Science Repository!</span
+            >
+          </div>
+          <div class="bonus-att">
+            <div class="blurbonus">
+              <span class="i-blur"></span>
+              <span class="bonus-att-a"
+                >Some of stuff will be able in the moment that i finish the
+                project.</span
+              >
+            </div>
+          </div>
+        </div>
         <!-- <div class="container">
           <div class="container-list">
             <ul>
@@ -103,10 +121,11 @@
 
       menuToggle.addEventListener("click", function () {
         this.classList.toggle("active");
-        if (mobileMenu.style.display === "flex") {
-          mobileMenu.style.display = "none";
+        mobileMenu.classList.toggle("active");
+        if (mobileMenu.classList.contains("active")) {
+          menuToggle.style.backgroundColor = "#fb8500";
         } else {
-          mobileMenu.style.display = "flex";
+          menuToggle.style.backgroundColor = "#ecf39e";
         }
       });
     });
