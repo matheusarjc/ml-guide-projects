@@ -332,6 +332,90 @@ nav {
   height: 1.4rem;
 }
 
+.main-container-title {
+  margin-top: 3rem;
+  text-align: center;
+}
+
+.main-container-title > span {
+  font-size: 2rem;
+  font-weight: 800;
+  line-height: 1rem;
+}
+
+.ag-courses_item {
+  overflow: hidden;
+
+  border-radius: 28px;
+}
+
+.ag-courses_item > ul {
+  display: flex;
+  flex-direction: column;
+  padding: 0;
+  gap: 1rem;
+}
+
+.ag-courses-item_link {
+  display: flex;
+  padding: 1rem 20px;
+  background-color: #121212;
+  overflow: hidden;
+  position: relative;
+  border-radius: 1rem;
+}
+.ag-courses-item_link:hover,
+.ag-courses-item_link:hover .ag-courses-item_date {
+  text-decoration: none;
+  color: #fff;
+}
+.ag-courses-item_link:hover .ag-courses-item_bg {
+  -webkit-transform: scale(10);
+  -ms-transform: scale(10);
+  transform: scale(10);
+}
+.ag-courses-item_title {
+  overflow: hidden;
+  font-weight: bold;
+  font-size: 16px;
+  color: #fff;
+  z-index: 2;
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.ag-curses-ul {
+  padding: 1.5rem 0;
+}
+
+.ag-courses-item_bg {
+  height: 128px;
+  width: 128px;
+  background-color: #f9b234;
+
+  z-index: 1;
+  position: absolute;
+  top: -75px;
+  right: -75px;
+
+  border-radius: 50%;
+
+  -webkit-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+
+footer {
+  width: 100%;
+}
+
+.content-footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
 @media screen and (min-width: 768px) {
   .menu-toggle {
     display: none;

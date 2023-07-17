@@ -2,11 +2,11 @@
 <html>
   <head>
     <title>Lista de Projetos</title>
-    <!--  <link
+    <link
       rel="stylesheet"
       href="{{ url_for('serve_css', filename='style.css') }}"
-    /> -->
-    <link rel="stylesheet" href="../static/css/style.css" />
+    />
+    <!-- <link rel="stylesheet" href="../static/css/style.css" /> -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -178,47 +178,44 @@
             </div>
           </div>
         </div>
-        <!-- <div class="container">
-          <div class="container-list">
+        <!-- Thrid Section (Main) -->
+        <div class="main-container">
+          <div class="main-container-title">
+            <span>LIST OF PROJECTS</span>
+          </div>
+          <div class="ag-courses_item">
+            {% if projetos %}
             <ul>
-              <a class="project-name" href="http://">
-                <li>Nome do projeto</li>
+              {% for projeto in projetos %} {% if projeto[2] == 'Concluído' %}
+              <a
+                href="{{ projeto[3] }}"
+                class="ag-courses-item_link"
+                target="_blank"
+              >
+                <div class="ag-courses-item_bg"></div>
+                <div class="ag-courses-item_title">
+                  <li>{{ projeto[1] }}</li>
+                </div>
               </a>
-              {% for projeto in projetos %}
-              <a class="project-name" href="{{ projeto[3] }}" target="_blank">
-                <li>{{ projeto[1] }}</li>
-              </a>
-              {% endfor %}
+              {% endif %} {% endfor %}
             </ul>
+            {% else %}
+            <p>Nenhum projeto concluído encontrado.</p>
+            {% endif %}
           </div>
-        </div> -->
-      </div>
-      <!-- FOOTER -->
-      <!-- <footer>
-        <div class="container-footer">
-          <div class="socials">
-            <a class="links" href="https://www.linkedin.com/in/matheusarjc/">
-              <img
-                id="icon"
-                src="..\static\images\linkedin-logo-fill.svg"
-                alt=""
-                srcset=""
-              />
-              <span class="tooltiptext">LinkedIn</span>
-            </a>
-            <a class="links" href="https://github.com/matheusarjc">
-              <img
-                id="icon"
-                src="..\static\images\github-logo-fill.svg"
-                alt=""
-                srcset=""
-              />
-              <span class="tooltiptext">GitHub</span>
-            </a>
-          </div>
-          <div class="copyright"><span>Made by Matheusarjc ©2023</span></div>
         </div>
-      </footer> -->
+        <!-- FOOTER -->
+        <footer>
+          <div class="content-footer">
+            <span
+              >This website was desenvolved with
+              <img src="../static/images/python.svg" alt="" /> +
+              <img src="../static/images/flask.svg" alt=""
+            /></span>
+            <span>by @matheusarjc 2023</span>
+          </div>
+        </footer>
+      </div>
       <img class="blurbg" src="../static/images/Blur-BG.svg" alt="" />
     </div>
   </body>
