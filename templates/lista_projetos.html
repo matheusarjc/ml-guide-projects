@@ -2,17 +2,13 @@
 <html>
   <head>
     <title>Lista de Projetos</title>
-    <link
-      rel="stylesheet"
-      href="{{ url_for('serve_css', filename='style.css') }}"
-    />
+    <link rel="stylesheet" href="{{ url_for('serve_css', filename='style.css') }}" />
     <!-- <link rel="stylesheet" href="../static/css/style.css" /> -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;400;700;800&display=swap"
-      rel="stylesheet"
-    />
+      rel="stylesheet" />
   </head>
   <body>
     <!-- First Background -->
@@ -25,38 +21,42 @@
               <li><a class="navlink" href="#">Repository</a></li>
               <li><a class="navlink" href="#">Who am I?</a></li>
               <li>
-                <details>
+                <details class="navlink">
                   <summary>
                     Socials
-                    <img
-                      id="caret"
-                      class="caret"
-                      src="../static/images/CaretDown.svg"
-                      alt=""
-                    />
+                    <img id="caret" class="caret" src="../static/images/CaretDown.svg" alt="" />
                   </summary>
                   <div class="container-links">
-                    <a class="social-link" href="">Github</a>
-                    <a class="social-link" href="">LinkedIn</a>
+                    <a class="social-link" href="#">Github</a>
+                    <a class="social-link" href="#1">LinkedIn</a>
                   </div>
                 </details>
               </li>
-              <a class="ctt-button" href="">Talk to me!</a>
+              <li>
+                <a href="" class="navlink--mobile"
+                  ><img src="../static/images/github-logo-fill.svg" alt="Github"
+                /></a>
+              </li>
+              <li>
+                <a href="" class="navlink--mobile"
+                  ><img src="../static/images/linkedin-logo-fill.svg" alt="LinkedIn"
+                /></a>
+              </li>
+              <a class="ctt-button--mobile" href=""
+                ><img class="ttm" src="../static/images/paperplane.svg" alt="" />
+              </a>
             </ul>
             <div class="menu-toggle">
-              <img
-                class="points-menu"
-                src="../static/images/DotsThreeVertical.svg"
-                alt=""
-              />
+              <img class="points-menu" src="../static/images/DotsThreeVertical.svg" alt="" />
             </div>
           </nav>
+          <a class="ctt-button" href="">Talk to me!</a>
         </header>
         <!-- First Section -->
         <div>
           <div class="attetion-content">
             <span class="a-title">Hey!</span>
-            <span class="a-subtitle"
+            <span class="a-subtitle a-subtitle-reset"
               >Welcome to my Machine Learning and Data Science Repository!</span
             >
           </div>
@@ -64,8 +64,7 @@
             <div class="blurbonus">
               <span class="i-blur"></span>
               <span class="bonus-att-a"
-                >Some of stuff will be able in the moment that i finish the
-                project.</span
+                >Some of stuff will be able in the moment that i finish the project.</span
               >
             </div>
           </div>
@@ -77,60 +76,33 @@
             <span class="title-ss">Here you will see some projects with:</span>
             <div class="kind-of-project">
               <span class="styles-projects">
-                <img
-                  class="check-icon"
-                  src="../static/images/CheckCircle.svg"
-                  alt=""
-                />Finance
+                <img class="check-icon" src="../static/images/CheckCircle.svg" alt="" />Finance
+              </span>
+              <span class="styles-projects">
+                <img class="check-icon" src="../static/images/CheckCircle.svg" alt="" />Marketing
+              </span>
+              <span class="styles-projects">
+                <img class="check-icon" src="../static/images/CheckCircle.svg" alt="" />Chatbot
+              </span>
+              <span class="styles-projects">
+                <img class="check-icon" src="../static/images/CheckCircle.svg" alt="" />PyTorch
+              </span>
+              <span class="styles-projects">
+                <img class="check-icon" src="../static/images/CheckCircle.svg" alt="" />Data Science
+              </span>
+              <span class="styles-projects">
+                <img class="check-icon" src="../static/images/CheckCircle.svg" alt="" />Neural
+                Networks
+              </span>
+              <span class="styles-projects">
+                <img class="check-icon" src="../static/images/CheckCircle.svg" alt="" />System
+                Detection
               </span>
               <span class="styles-projects">
                 <img
                   class="check-icon"
                   src="../static/images/CheckCircle.svg"
-                  alt=""
-                />Marketing
-              </span>
-              <span class="styles-projects">
-                <img
-                  class="check-icon"
-                  src="../static/images/CheckCircle.svg"
-                  alt=""
-                />Chatbot
-              </span>
-              <span class="styles-projects">
-                <img
-                  class="check-icon"
-                  src="../static/images/CheckCircle.svg"
-                  alt=""
-                />PyTorch
-              </span>
-              <span class="styles-projects">
-                <img
-                  class="check-icon"
-                  src="../static/images/CheckCircle.svg"
-                  alt=""
-                />Data Science
-              </span>
-              <span class="styles-projects">
-                <img
-                  class="check-icon"
-                  src="../static/images/CheckCircle.svg"
-                  alt=""
-                />Neural Networks
-              </span>
-              <span class="styles-projects">
-                <img
-                  class="check-icon"
-                  src="../static/images/CheckCircle.svg"
-                  alt=""
-                />System Detection
-              </span>
-              <span class="styles-projects">
-                <img
-                  class="check-icon"
-                  src="../static/images/CheckCircle.svg"
-                  alt=""
-                />Geoprocessing
+                  alt="" />Geoprocessing
               </span>
             </div>
           </div>
@@ -138,40 +110,28 @@
           <div class="ss-whoami">
             <div class="card-whoami">
               <span class="title">Who am I?</span>
-              <span class="subtitle"
-                >My name is Matheus Araujo (or @matheusarjc)</span
-              >
+              <span class="subtitle">My name is Matheus Araujo (or @matheusarjc)</span>
               <div class="whoami-description">
                 <span class="data-whoami"
-                  ><img src="../static/images/Checks.svg" alt="" />Gratuated in
-                  economics</span
+                  ><img src="../static/images/Checks.svg" alt="" />Gratuated in economics</span
                 >
                 <span class="data-whoami"
-                  ><img src="../static/images/Checks.svg" alt="" />Data
-                  Scientist</span
+                  ><img src="../static/images/Checks.svg" alt="" />Data Scientist</span
                 >
                 <span class="data-whoami"
-                  ><img src="../static/images/Checks.svg" alt="" />Machine
-                  Learning enthusiast</span
+                  ><img src="../static/images/Checks.svg" alt="" />Machine Learning enthusiast</span
                 >
                 <span class="data-whoami"
-                  ><img
-                    src="../static/images/Checks.svg"
-                    alt=""
-                  />Entrepreuner</span
+                  ><img src="../static/images/Checks.svg" alt="" />Entrepreuner</span
                 >
                 <span class="data-whoami"
-                  ><img src="../static/images/Checks.svg" alt="" />Business
-                  Analyst</span
+                  ><img src="../static/images/Checks.svg" alt="" />Business Analyst</span
                 >
                 <span class="data-whoami"
-                  ><img
-                    src="../static/images/Checks.svg"
-                    alt=""
-                  />Brazilian</span
+                  ><img src="../static/images/Checks.svg" alt="" />Python Developer</span
                 >
                 <span class="data-whoami"
-                  ><img src="../static/images/Checks.svg" alt="" />European
+                  ><img src="../static/images/Checks.svg" alt="" />Brazilian/European
                   citizienship</span
                 >
               </div>
@@ -187,11 +147,7 @@
             {% if projetos %}
             <ul>
               {% for projeto in projetos %} {% if projeto[2] == 'Concluído' %}
-              <a
-                href="{{ projeto[3] }}"
-                class="ag-courses-item_link"
-                target="_blank"
-              >
+              <a href="{{ projeto[3] }}" class="ag-courses-item_link" target="_blank">
                 <div class="ag-courses-item_bg"></div>
                 <div class="ag-courses-item_title">
                   <li>{{ projeto[1] }}</li>
