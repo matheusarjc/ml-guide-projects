@@ -516,4 +516,8 @@ footer {
   .check-icon {
     height: 2rem;
   }
+
+  .ag-courses-item_title {
+    font-size: 1.2rem;
+  }
 }
