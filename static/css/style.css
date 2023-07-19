@@ -88,13 +88,13 @@ nav {
   flex-direction: column;
 }
 
-.menu li details summary {
+.menu li .navlink summary {
   display: flex;
   gap: 0.2rem;
   align-items: center;
 }
 
-.menu li details summary::marker {
+.menu li .navlink summary::marker {
   color: #000000;
   font-weight: 300;
   right: 0;
@@ -369,14 +369,14 @@ nav {
   border-radius: 1rem;
 }
 .ag-courses-item_link:hover,
-.ag-courses-item_link:hover .ag-courses-item_date {
+.ag-courses-item_link:hover {
   text-decoration: none;
   color: #fff;
 }
 .ag-courses-item_link:hover .ag-courses-item_bg {
-  -webkit-transform: scale(10);
-  -ms-transform: scale(10);
-  transform: scale(10);
+  -webkit-transform: scale(20);
+  -ms-transform: scale(20);
+  transform: scale(20);
 }
 .ag-courses-item_title {
   overflow: hidden;
